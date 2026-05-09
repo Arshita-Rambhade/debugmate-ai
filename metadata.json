@@ -1,0 +1,6 @@
+{
+  "name": "DebugMate AI",
+  "description": "A modern AI-powered debugger that explains programming errors and code snippets in beginner-friendly language using Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI Error Analysis", "Code Explanation", "Screenshot Debugging"]
+}

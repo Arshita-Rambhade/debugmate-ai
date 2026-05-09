@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #4f46e5;
+  --color-brand-light: #818cf8;
+  --color-brand-muted: rgba(79, 70, 229, 0.1);
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#020617] text-slate-200 antialiased selection:bg-brand/30;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-slate-900/40 backdrop-blur-md border border-slate-800 shadow-xl;
+  }
+  
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-slate-900/60 hover:border-slate-700 hover:shadow-2xl hover:shadow-brand/5;
+  }
+
+  .sidebar-label {
+    @apply text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em];
+  }
+
+  .premium-card {
+    @apply bg-slate-900/20 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-slate-700;
+  }
+
+  .terminal-card {
+    @apply bg-[#0b1120] border border-slate-800 rounded-xl overflow-hidden font-mono;
+  }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
